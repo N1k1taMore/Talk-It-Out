@@ -1,16 +1,10 @@
 /* eslint-disable react/prop-types */
-import {IF} from '../url'
 
 
 const HomePosts = ({post}) => {
   return (
-    <div className="shadow-2xl w-[100%] flex mt-8 space-x-4 rounded-lg">
-    {/* left */}
-    <div className="w-[25%] h-[150px] flex justify-center items-center mr-[4px]">
-    <img src={IF+post.photo} alt="" className="h-full w-full object-cover"/>
-    </div>
-    {/* right */}
-    <div className="flex flex-col w-[70%]">
+    <div className="shadow-2xl w-[100%] flex mt-8 space-x-4 rounded-lg p-5">
+    <div className="flex flex-col w-[100%]">
       <h1 className="text-xl font-bold md:mb-2 mb-1 md:text-2xl">
       {post.title}
       </h1>

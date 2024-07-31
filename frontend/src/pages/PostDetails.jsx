@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar"
 import {BiEdit} from 'react-icons/bi'
 import {MdDelete} from 'react-icons/md'
 import axios from "axios"
-import { URL,IF } from "../url"
+import { URL} from "../url"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../context/UserContext"
 import Loader from "../components/Loader"
@@ -25,7 +25,7 @@ const PostDetails = () => {
   const fetchPost=async()=>{
     try{
       const res= await axios.get(URL+"/api/posts/"+postId)
-      // console.log(res.data)
+      console.log(res.data)
       setPost(res.data)
     }
     catch(err){
@@ -109,7 +109,6 @@ const PostDetails = () => {
        <p>{new Date(post.updatedAt).toString().slice(16,24)}</p>
        </div>
         </div>
-        <img src={IF+post.photo} className="w-full  mx-auto mt-8" alt=""/>
          <p className="mx-auto mt-8">{post.desc}</p>
          <div className="flex items-center mt-8 space-x-4 font-semibold">
          </div>
