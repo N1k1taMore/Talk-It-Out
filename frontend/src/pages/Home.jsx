@@ -2,6 +2,7 @@ import axios from 'axios';
 import Footer from '../components/Footer';
 import HomePosts from '../components/HomePosts';
 import Navbar from '../components/Navbar';
+import Cards from '../components/Cards';
 import { URL } from '../url';
 import { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -41,6 +42,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
+      
       <div className="px-[12%] md:px-[100px] min-h-[80vh] py-9">
         {loader ? (
           <div className="h-[40vh] flex justify-center items-center">
@@ -59,7 +61,7 @@ const Home = () => {
           <h3 className="text-center font-bold mt-16">No posts available</h3>
         )}
       </div>
-      
+      <Cards></Cards>
       <Footer />
     </>
   );

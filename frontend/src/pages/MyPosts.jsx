@@ -9,7 +9,7 @@ import HomePosts from "../components/HomePosts"
 import Loader from "../components/Loader"
 
 
-const MyBlogs = () => {
+const MyPosts = () => {
   const {search}=useLocation()
   console.log(search)
   const [posts,setPosts]=useState([])
@@ -63,4 +63,4 @@ const MyBlogs = () => {
   )
 }
 
-export default MyBlogs
+export default MyPosts
